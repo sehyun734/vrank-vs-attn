@@ -1,0 +1,613 @@
+
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]
+Loading weights:  15%|█▌        | 47/310 [00:00<00:00, 465.72it/s]
+Loading weights:  57%|█████▋    | 176/310 [00:00<00:00, 946.26it/s]
+Loading weights:  99%|█████████▊| 306/310 [00:00<00:00, 1102.70it/s]
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 1018.17it/s]
+
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]
+Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 226374.46 examples/s]
+
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]
+Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 295086.78 examples/s]
+pending=25
+  base
+  lora/rank=16,learning_rate=0.0001,seed=0
+  lora/rank=16,learning_rate=0.0003,seed=0
+  lora/rank=16,learning_rate=0.001,seed=0
+  lora/rank=16,learning_rate=0.003,seed=0
+  lora/rank=4,learning_rate=0.0001,seed=0
+  lora/rank=4,learning_rate=0.0003,seed=0
+  lora/rank=4,learning_rate=0.001,seed=0
+  lora/rank=4,learning_rate=0.003,seed=0
+  lora/rank=64,learning_rate=0.0001,seed=0
+  lora/rank=64,learning_rate=0.0003,seed=0
+  lora/rank=64,learning_rate=0.001,seed=0
+  lora/rank=64,learning_rate=0.003,seed=0
+  prefix/prefix_len=16,learning_rate=0.003,seed=0
+  prefix/prefix_len=16,learning_rate=0.01,seed=0
+  prefix/prefix_len=16,learning_rate=0.03,seed=0
+  prefix/prefix_len=16,learning_rate=0.1,seed=0
+  prefix/prefix_len=256,learning_rate=0.003,seed=0
+  prefix/prefix_len=256,learning_rate=0.01,seed=0
+  prefix/prefix_len=256,learning_rate=0.03,seed=0
+  prefix/prefix_len=256,learning_rate=0.1,seed=0
+  prefix/prefix_len=64,learning_rate=0.003,seed=0
+  prefix/prefix_len=64,learning_rate=0.01,seed=0
+  prefix/prefix_len=64,learning_rate=0.03,seed=0
+  prefix/prefix_len=64,learning_rate=0.1,seed=0
+step=1/21 accuracy=48.44% dt=0m26s
+step=2/21 accuracy=57.03% dt=0m24s
+step=3/21 accuracy=51.56% dt=0m25s
+step=4/21 accuracy=52.73% dt=0m24s
+step=5/21 accuracy=51.25% dt=0m24s
+step=6/21 accuracy=52.60% dt=0m24s
+step=7/21 accuracy=53.35% dt=0m24s
+step=8/21 accuracy=52.73% dt=0m24s
+step=9/21 accuracy=53.30% dt=0m24s
+step=10/21 accuracy=53.12% dt=0m24s
+step=11/21 accuracy=53.27% dt=0m25s
+step=12/21 accuracy=53.26% dt=0m24s
+step=13/21 accuracy=52.64% dt=0m24s
+step=14/21 accuracy=53.01% dt=0m24s
+step=15/21 accuracy=53.12% dt=0m24s
+step=16/21 accuracy=52.64% dt=0m25s
+step=17/21 accuracy=52.11% dt=0m25s
+step=18/21 accuracy=52.00% dt=0m24s
+step=19/21 accuracy=51.64% dt=0m24s
+step=20/21 accuracy=51.17% dt=0m25s
+step=21/21 accuracy=51.10% dt=0m25s
+accuracy=51.10%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/base/gsm8k.json
+step=1/21 accuracy=59.38% dt=0m32s
+step=2/21 accuracy=64.84% dt=0m32s
+step=3/21 accuracy=66.15% dt=0m32s
+step=4/21 accuracy=66.02% dt=0m17s
+step=5/21 accuracy=66.56% dt=0m32s
+step=6/21 accuracy=65.36% dt=0m24s
+step=7/21 accuracy=65.85% dt=0m17s
+step=8/21 accuracy=66.21% dt=0m32s
+step=9/21 accuracy=66.49% dt=0m23s
+step=10/21 accuracy=66.72% dt=0m32s
+step=11/21 accuracy=67.19% dt=0m16s
+step=12/21 accuracy=67.58% dt=0m19s
+step=13/21 accuracy=66.71% dt=0m31s
+step=14/21 accuracy=67.19% dt=0m14s
+step=15/21 accuracy=66.98% dt=0m17s
+step=16/21 accuracy=66.60% dt=0m32s
+step=17/21 accuracy=66.45% dt=0m21s
+step=18/21 accuracy=66.32% dt=0m19s
+step=19/21 accuracy=66.04% dt=0m20s
+step=20/21 accuracy=66.02% dt=0m16s
+step=21/21 accuracy=66.11% dt=0m16s
+accuracy=66.11%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=16,learning_rate=0.0001,seed=0/gsm8k.json
+step=1/21 accuracy=60.94% dt=0m16s
+step=2/21 accuracy=63.28% dt=0m16s
+step=3/21 accuracy=66.15% dt=0m32s
+step=4/21 accuracy=66.02% dt=0m14s
+step=5/21 accuracy=67.19% dt=0m18s
+step=6/21 accuracy=65.62% dt=0m32s
+step=7/21 accuracy=65.62% dt=0m31s
+step=8/21 accuracy=65.62% dt=0m19s
+step=9/21 accuracy=66.49% dt=0m17s
+step=10/21 accuracy=66.41% dt=0m32s
+step=11/21 accuracy=66.62% dt=0m16s
+step=12/21 accuracy=67.32% dt=0m19s
+step=13/21 accuracy=66.47% dt=0m32s
+step=14/21 accuracy=66.74% dt=0m17s
+step=15/21 accuracy=66.56% dt=0m32s
+step=16/21 accuracy=66.31% dt=0m19s
+step=17/21 accuracy=65.99% dt=0m17s
+step=18/21 accuracy=65.71% dt=0m19s
+step=19/21 accuracy=65.46% dt=0m32s
+step=20/21 accuracy=65.62% dt=0m15s
+step=21/21 accuracy=65.73% dt=0m18s
+accuracy=65.73%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=16,learning_rate=0.0003,seed=0/gsm8k.json
+step=1/21 accuracy=57.81% dt=0m32s
+step=2/21 accuracy=58.59% dt=0m16s
+step=3/21 accuracy=59.38% dt=0m32s
+step=4/21 accuracy=61.72% dt=0m15s
+step=5/21 accuracy=64.69% dt=0m15s
+step=6/21 accuracy=63.28% dt=0m21s
+step=7/21 accuracy=63.39% dt=0m20s
+step=8/21 accuracy=63.67% dt=0m17s
+step=9/21 accuracy=64.58% dt=0m19s
+step=10/21 accuracy=64.53% dt=0m32s
+step=11/21 accuracy=65.06% dt=0m18s
+step=12/21 accuracy=65.49% dt=0m19s
+step=13/21 accuracy=64.78% dt=0m25s
+step=14/21 accuracy=65.40% dt=0m19s
+step=15/21 accuracy=65.10% dt=0m25s
+step=16/21 accuracy=64.84% dt=0m20s
+step=17/21 accuracy=64.52% dt=0m20s
+step=18/21 accuracy=64.41% dt=0m24s
+step=19/21 accuracy=64.14% dt=0m17s
+step=20/21 accuracy=64.22% dt=0m16s
+step=21/21 accuracy=64.06% dt=0m18s
+accuracy=64.06%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=16,learning_rate=0.001,seed=0/gsm8k.json
+step=1/21 accuracy=56.25% dt=0m22s
+step=2/21 accuracy=64.06% dt=0m20s
+step=3/21 accuracy=61.98% dt=0m32s
+step=4/21 accuracy=65.23% dt=0m16s
+step=5/21 accuracy=65.31% dt=0m16s
+step=6/21 accuracy=64.84% dt=0m23s
+step=7/21 accuracy=64.51% dt=0m19s
+step=8/21 accuracy=64.65% dt=0m32s
+step=9/21 accuracy=65.10% dt=0m21s
+step=10/21 accuracy=63.91% dt=0m32s
+step=11/21 accuracy=63.35% dt=0m15s
+step=12/21 accuracy=63.54% dt=0m19s
+step=13/21 accuracy=63.22% dt=0m24s
+step=14/21 accuracy=64.40% dt=0m19s
+step=15/21 accuracy=63.54% dt=0m23s
+step=16/21 accuracy=62.79% dt=0m32s
+step=17/21 accuracy=62.87% dt=0m32s
+step=18/21 accuracy=62.85% dt=0m20s
+step=19/21 accuracy=62.66% dt=0m19s
+step=20/21 accuracy=62.27% dt=0m16s
+step=21/21 accuracy=62.40% dt=0m30s
+accuracy=62.40%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=16,learning_rate=0.003,seed=0/gsm8k.json
+step=1/21 accuracy=53.12% dt=0m32s
+step=2/21 accuracy=61.72% dt=0m32s
+step=3/21 accuracy=64.06% dt=0m32s
+step=4/21 accuracy=64.45% dt=0m17s
+step=5/21 accuracy=64.06% dt=0m32s
+step=6/21 accuracy=62.76% dt=0m24s
+step=7/21 accuracy=63.62% dt=0m18s
+step=8/21 accuracy=63.28% dt=0m20s
+step=9/21 accuracy=63.72% dt=0m15s
+step=10/21 accuracy=63.91% dt=0m32s
+step=11/21 accuracy=64.77% dt=0m16s
+step=12/21 accuracy=65.23% dt=0m18s
+step=13/21 accuracy=64.90% dt=0m32s
+step=14/21 accuracy=65.40% dt=0m20s
+step=15/21 accuracy=65.21% dt=0m18s
+step=16/21 accuracy=64.45% dt=0m20s
+step=17/21 accuracy=64.34% dt=0m19s
+step=18/21 accuracy=64.06% dt=0m20s
+step=19/21 accuracy=63.82% dt=0m20s
+step=20/21 accuracy=63.59% dt=0m21s
+step=21/21 accuracy=63.76% dt=0m15s
+accuracy=63.76%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=4,learning_rate=0.0001,seed=0/gsm8k.json
+step=1/21 accuracy=51.56% dt=0m31s
+step=2/21 accuracy=60.16% dt=0m32s
+step=3/21 accuracy=63.54% dt=0m23s
+step=4/21 accuracy=64.84% dt=0m18s
+step=5/21 accuracy=65.00% dt=0m16s
+step=6/21 accuracy=65.10% dt=0m27s
+step=7/21 accuracy=65.40% dt=0m15s
+step=8/21 accuracy=64.84% dt=0m22s
+step=9/21 accuracy=65.45% dt=0m21s
+step=10/21 accuracy=65.78% dt=0m32s
+step=11/21 accuracy=66.05% dt=0m18s
+step=12/21 accuracy=66.41% dt=0m21s
+step=13/21 accuracy=65.87% dt=0m23s
+step=14/21 accuracy=66.29% dt=0m32s
+step=15/21 accuracy=65.73% dt=0m32s
+step=16/21 accuracy=65.04% dt=0m21s
+step=17/21 accuracy=64.80% dt=0m32s
+step=18/21 accuracy=64.41% dt=0m27s
+step=19/21 accuracy=64.06% dt=0m20s
+step=20/21 accuracy=63.98% dt=0m16s
+step=21/21 accuracy=64.14% dt=0m17s
+accuracy=64.14%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=4,learning_rate=0.0003,seed=0/gsm8k.json
+step=1/21 accuracy=57.81% dt=0m14s
+step=2/21 accuracy=62.50% dt=0m32s
+step=3/21 accuracy=64.58% dt=0m32s
+step=4/21 accuracy=66.02% dt=0m32s
+step=5/21 accuracy=65.62% dt=0m17s
+step=6/21 accuracy=64.32% dt=0m32s
+step=7/21 accuracy=63.62% dt=0m16s
+step=8/21 accuracy=64.45% dt=0m32s
+step=9/21 accuracy=65.45% dt=0m22s
+step=10/21 accuracy=65.78% dt=0m32s
+step=11/21 accuracy=65.62% dt=0m32s
+step=12/21 accuracy=65.62% dt=0m19s
+step=13/21 accuracy=65.50% dt=0m32s
+step=14/21 accuracy=66.07% dt=0m32s
+step=15/21 accuracy=65.52% dt=0m17s
+step=16/21 accuracy=64.75% dt=0m19s
+step=17/21 accuracy=64.34% dt=0m20s
+step=18/21 accuracy=63.89% dt=0m25s
+step=19/21 accuracy=63.73% dt=0m23s
+step=20/21 accuracy=64.06% dt=0m16s
+step=21/21 accuracy=64.06% dt=0m17s
+accuracy=64.06%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=4,learning_rate=0.001,seed=0/gsm8k.json
+step=1/21 accuracy=56.25% dt=0m16s
+step=2/21 accuracy=64.06% dt=0m18s
+step=3/21 accuracy=62.50% dt=0m32s
+step=4/21 accuracy=63.67% dt=0m15s
+step=5/21 accuracy=64.06% dt=0m15s
+step=6/21 accuracy=61.98% dt=0m32s
+step=7/21 accuracy=62.05% dt=0m32s
+step=8/21 accuracy=62.50% dt=0m21s
+step=9/21 accuracy=62.85% dt=0m16s
+step=10/21 accuracy=62.66% dt=0m32s
+step=11/21 accuracy=63.35% dt=0m16s
+step=12/21 accuracy=64.32% dt=0m29s
+step=13/21 accuracy=63.82% dt=0m32s
+step=14/21 accuracy=64.40% dt=0m17s
+step=15/21 accuracy=63.96% dt=0m22s
+step=16/21 accuracy=63.09% dt=0m21s
+step=17/21 accuracy=62.68% dt=0m17s
+step=18/21 accuracy=62.50% dt=0m22s
+step=19/21 accuracy=62.34% dt=0m19s
+step=20/21 accuracy=62.66% dt=0m16s
+step=21/21 accuracy=62.70% dt=0m15s
+accuracy=62.70%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=4,learning_rate=0.003,seed=0/gsm8k.json
+step=1/21 accuracy=60.94% dt=0m18s
+step=2/21 accuracy=63.28% dt=0m32s
+step=3/21 accuracy=65.62% dt=0m21s
+step=4/21 accuracy=67.97% dt=0m14s
+step=5/21 accuracy=67.81% dt=0m18s
+step=6/21 accuracy=66.67% dt=0m32s
+step=7/21 accuracy=66.52% dt=0m18s
+step=8/21 accuracy=66.60% dt=0m17s
+step=9/21 accuracy=67.19% dt=0m17s
+step=10/21 accuracy=66.88% dt=0m32s
+step=11/21 accuracy=66.76% dt=0m18s
+step=12/21 accuracy=67.58% dt=0m19s
+step=13/21 accuracy=66.71% dt=0m29s
+step=14/21 accuracy=67.19% dt=0m32s
+step=15/21 accuracy=66.77% dt=0m32s
+step=16/21 accuracy=66.02% dt=0m30s
+step=17/21 accuracy=65.90% dt=0m19s
+step=18/21 accuracy=66.15% dt=0m19s
+step=19/21 accuracy=65.79% dt=0m32s
+step=20/21 accuracy=65.94% dt=0m16s
+step=21/21 accuracy=65.96% dt=0m16s
+accuracy=65.96%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=64,learning_rate=0.0001,seed=0/gsm8k.json
+step=1/21 accuracy=59.38% dt=0m19s
+step=2/21 accuracy=61.72% dt=0m14s
+step=3/21 accuracy=63.54% dt=0m22s
+step=4/21 accuracy=64.45% dt=0m17s
+step=5/21 accuracy=64.69% dt=0m32s
+step=6/21 accuracy=64.06% dt=0m21s
+step=7/21 accuracy=64.29% dt=0m19s
+step=8/21 accuracy=64.26% dt=0m16s
+step=9/21 accuracy=64.41% dt=0m32s
+step=10/21 accuracy=65.31% dt=0m32s
+step=11/21 accuracy=65.20% dt=0m17s
+step=12/21 accuracy=66.02% dt=0m20s
+step=13/21 accuracy=65.87% dt=0m24s
+step=14/21 accuracy=66.63% dt=0m15s
+step=15/21 accuracy=66.04% dt=0m32s
+step=16/21 accuracy=65.72% dt=0m20s
+step=17/21 accuracy=64.98% dt=0m26s
+step=18/21 accuracy=64.84% dt=0m32s
+step=19/21 accuracy=64.56% dt=0m18s
+step=20/21 accuracy=65.00% dt=0m16s
+step=21/21 accuracy=64.82% dt=0m16s
+accuracy=64.82%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=64,learning_rate=0.0003,seed=0/gsm8k.json
+step=1/21 accuracy=62.50% dt=0m16s
+step=2/21 accuracy=64.06% dt=0m17s
+step=3/21 accuracy=65.62% dt=0m20s
+step=4/21 accuracy=66.41% dt=0m21s
+step=5/21 accuracy=66.25% dt=0m16s
+step=6/21 accuracy=65.36% dt=0m20s
+step=7/21 accuracy=64.51% dt=0m17s
+step=8/21 accuracy=64.45% dt=0m17s
+step=9/21 accuracy=65.10% dt=0m16s
+step=10/21 accuracy=65.00% dt=0m32s
+step=11/21 accuracy=65.20% dt=0m15s
+step=12/21 accuracy=65.76% dt=0m32s
+step=13/21 accuracy=65.14% dt=0m21s
+step=14/21 accuracy=65.51% dt=0m16s
+step=15/21 accuracy=64.90% dt=0m17s
+step=16/21 accuracy=64.65% dt=0m21s
+step=17/21 accuracy=64.25% dt=0m19s
+step=18/21 accuracy=63.89% dt=0m16s
+step=19/21 accuracy=63.98% dt=0m18s
+step=20/21 accuracy=64.14% dt=0m16s
+step=21/21 accuracy=64.14% dt=0m15s
+accuracy=64.14%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=64,learning_rate=0.001,seed=0/gsm8k.json
+step=1/21 accuracy=0.00% dt=0m32s
+step=2/21 accuracy=0.00% dt=0m32s
+step=3/21 accuracy=0.00% dt=0m32s
+step=4/21 accuracy=0.00% dt=0m32s
+step=5/21 accuracy=0.00% dt=0m32s
+step=6/21 accuracy=0.00% dt=0m32s
+step=7/21 accuracy=0.00% dt=0m32s
+step=8/21 accuracy=0.00% dt=0m32s
+step=9/21 accuracy=0.00% dt=0m32s
+step=10/21 accuracy=0.16% dt=0m32s
+step=11/21 accuracy=0.14% dt=0m32s
+step=12/21 accuracy=0.13% dt=0m32s
+step=13/21 accuracy=0.12% dt=0m32s
+step=14/21 accuracy=0.11% dt=0m32s
+step=15/21 accuracy=0.10% dt=0m32s
+step=16/21 accuracy=0.20% dt=0m32s
+step=17/21 accuracy=0.18% dt=0m32s
+step=18/21 accuracy=0.17% dt=0m32s
+step=19/21 accuracy=0.16% dt=0m32s
+step=20/21 accuracy=0.16% dt=0m32s
+step=21/21 accuracy=0.15% dt=0m32s
+accuracy=0.15%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=64,learning_rate=0.003,seed=0/gsm8k.json
+step=1/21 accuracy=54.69% dt=0m14s
+step=2/21 accuracy=60.94% dt=0m14s
+step=3/21 accuracy=60.94% dt=0m25s
+step=4/21 accuracy=62.50% dt=0m24s
+step=5/21 accuracy=62.81% dt=0m20s
+step=6/21 accuracy=60.94% dt=0m15s
+step=7/21 accuracy=61.38% dt=0m16s
+step=8/21 accuracy=61.72% dt=0m12s
+step=9/21 accuracy=61.98% dt=0m15s
+step=10/21 accuracy=61.56% dt=0m24s
+step=11/21 accuracy=61.79% dt=0m24s
+step=12/21 accuracy=61.72% dt=0m14s
+step=13/21 accuracy=61.18% dt=0m25s
+step=14/21 accuracy=61.72% dt=0m12s
+step=15/21 accuracy=61.25% dt=0m12s
+step=16/21 accuracy=60.74% dt=0m15s
+step=17/21 accuracy=60.57% dt=0m17s
+step=18/21 accuracy=60.24% dt=0m14s
+step=19/21 accuracy=60.03% dt=0m25s
+step=20/21 accuracy=60.00% dt=0m13s
+step=21/21 accuracy=60.27% dt=0m12s
+accuracy=60.27%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.003,seed=0/gsm8k.json
+step=1/21 accuracy=64.06% dt=0m24s
+step=2/21 accuracy=65.62% dt=0m25s
+step=3/21 accuracy=66.15% dt=0m24s
+step=4/21 accuracy=66.80% dt=0m25s
+step=5/21 accuracy=65.62% dt=0m25s
+step=6/21 accuracy=63.80% dt=0m18s
+step=7/21 accuracy=63.84% dt=0m18s
+step=8/21 accuracy=64.26% dt=0m13s
+step=9/21 accuracy=65.10% dt=0m14s
+step=10/21 accuracy=64.53% dt=0m25s
+step=11/21 accuracy=64.63% dt=0m14s
+step=12/21 accuracy=64.58% dt=0m15s
+step=13/21 accuracy=63.94% dt=0m20s
+step=14/21 accuracy=64.73% dt=0m25s
+step=15/21 accuracy=64.48% dt=0m15s
+step=16/21 accuracy=64.16% dt=0m15s
+step=17/21 accuracy=63.24% dt=0m17s
+step=18/21 accuracy=63.02% dt=0m16s
+step=19/21 accuracy=62.83% dt=0m14s
+step=20/21 accuracy=62.50% dt=0m13s
+step=21/21 accuracy=62.55% dt=0m12s
+accuracy=62.55%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.01,seed=0/gsm8k.json
+step=1/21 accuracy=57.81% dt=0m13s
+step=2/21 accuracy=62.50% dt=0m25s
+step=3/21 accuracy=63.02% dt=0m25s
+step=4/21 accuracy=62.50% dt=0m25s
+step=5/21 accuracy=63.12% dt=0m25s
+step=6/21 accuracy=63.28% dt=0m25s
+step=7/21 accuracy=63.62% dt=0m17s
+step=8/21 accuracy=63.67% dt=0m15s
+step=9/21 accuracy=63.72% dt=0m25s
+step=10/21 accuracy=63.59% dt=0m25s
+step=11/21 accuracy=63.64% dt=0m18s
+step=12/21 accuracy=64.06% dt=0m15s
+step=13/21 accuracy=63.22% dt=0m21s
+step=14/21 accuracy=63.95% dt=0m15s
+step=15/21 accuracy=63.54% dt=0m25s
+step=16/21 accuracy=62.89% dt=0m16s
+step=17/21 accuracy=62.32% dt=0m15s
+step=18/21 accuracy=62.33% dt=0m13s
+step=19/21 accuracy=62.17% dt=0m13s
+step=20/21 accuracy=62.03% dt=0m16s
+step=21/21 accuracy=62.17% dt=0m14s
+accuracy=62.17%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.03,seed=0/gsm8k.json
+step=1/21 accuracy=51.56% dt=0m25s
+step=2/21 accuracy=57.03% dt=0m12s
+step=3/21 accuracy=56.77% dt=0m25s
+step=4/21 accuracy=58.98% dt=0m24s
+step=5/21 accuracy=57.81% dt=0m25s
+step=6/21 accuracy=59.11% dt=0m17s
+step=7/21 accuracy=59.38% dt=0m15s
+step=8/21 accuracy=59.77% dt=0m16s
+step=9/21 accuracy=60.76% dt=0m13s
+step=10/21 accuracy=61.25% dt=0m16s
+step=11/21 accuracy=61.79% dt=0m14s
+step=12/21 accuracy=62.89% dt=0m16s
+step=13/21 accuracy=62.14% dt=0m24s
+step=14/21 accuracy=62.83% dt=0m17s
+step=15/21 accuracy=62.71% dt=0m25s
+step=16/21 accuracy=62.79% dt=0m25s
+step=17/21 accuracy=62.78% dt=0m16s
+step=18/21 accuracy=62.76% dt=0m24s
+step=19/21 accuracy=62.75% dt=0m25s
+step=20/21 accuracy=62.11% dt=0m13s
+step=21/21 accuracy=62.09% dt=0m17s
+accuracy=62.09%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.1,seed=0/gsm8k.json
+step=1/21 accuracy=56.25% dt=0m26s
+step=2/21 accuracy=58.59% dt=0m26s
+step=3/21 accuracy=60.42% dt=0m26s
+step=4/21 accuracy=61.72% dt=0m12s
+step=5/21 accuracy=61.56% dt=0m13s
+step=6/21 accuracy=61.46% dt=0m18s
+step=7/21 accuracy=61.16% dt=0m19s
+step=8/21 accuracy=60.94% dt=0m13s
+step=9/21 accuracy=61.63% dt=0m14s
+step=10/21 accuracy=61.41% dt=0m26s
+step=11/21 accuracy=61.93% dt=0m26s
+step=12/21 accuracy=62.50% dt=0m15s
+step=13/21 accuracy=61.90% dt=0m26s
+step=14/21 accuracy=62.95% dt=0m12s
+step=15/21 accuracy=62.50% dt=0m15s
+step=16/21 accuracy=62.11% dt=0m15s
+step=17/21 accuracy=61.95% dt=0m18s
+step=18/21 accuracy=61.81% dt=0m12s
+step=19/21 accuracy=61.35% dt=0m13s
+step=20/21 accuracy=61.02% dt=0m13s
+step=21/21 accuracy=61.11% dt=0m13s
+accuracy=61.11%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=256,learning_rate=0.003,seed=0/gsm8k.json
+step=1/21 accuracy=48.44% dt=0m14s
+step=2/21 accuracy=53.12% dt=0m13s
+step=3/21 accuracy=55.73% dt=0m26s
+step=4/21 accuracy=58.59% dt=0m26s
+step=5/21 accuracy=59.69% dt=0m26s
+step=6/21 accuracy=59.64% dt=0m20s
+step=7/21 accuracy=59.38% dt=0m14s
+step=8/21 accuracy=59.96% dt=0m26s
+step=9/21 accuracy=60.59% dt=0m12s
+step=10/21 accuracy=60.47% dt=0m26s
+step=11/21 accuracy=60.51% dt=0m14s
+step=12/21 accuracy=61.33% dt=0m16s
+step=13/21 accuracy=61.30% dt=0m15s
+step=14/21 accuracy=62.28% dt=0m13s
+step=15/21 accuracy=61.98% dt=0m13s
+step=16/21 accuracy=61.72% dt=0m15s
+step=17/21 accuracy=61.21% dt=0m18s
+step=18/21 accuracy=60.85% dt=0m15s
+step=19/21 accuracy=61.10% dt=0m14s
+step=20/21 accuracy=60.86% dt=0m13s
+step=21/21 accuracy=60.73% dt=0m13s
+accuracy=60.73%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=256,learning_rate=0.01,seed=0/gsm8k.json
+step=1/21 accuracy=57.81% dt=0m17s
+step=2/21 accuracy=58.59% dt=0m13s
+step=3/21 accuracy=59.38% dt=0m26s
+step=4/21 accuracy=62.11% dt=0m13s
+step=5/21 accuracy=61.56% dt=0m26s
+step=6/21 accuracy=61.20% dt=0m18s
+step=7/21 accuracy=60.49% dt=0m12s
+step=8/21 accuracy=60.94% dt=0m13s
+step=9/21 accuracy=61.63% dt=0m12s
+step=10/21 accuracy=61.25% dt=0m26s
+step=11/21 accuracy=61.65% dt=0m14s
+step=12/21 accuracy=62.50% dt=0m15s
+step=13/21 accuracy=62.50% dt=0m26s
+step=14/21 accuracy=62.95% dt=0m18s
+step=15/21 accuracy=62.60% dt=0m26s
+step=16/21 accuracy=61.62% dt=0m26s
+step=17/21 accuracy=61.49% dt=0m16s
+step=18/21 accuracy=60.85% dt=0m26s
+step=19/21 accuracy=60.69% dt=0m27s
+step=20/21 accuracy=60.62% dt=0m14s
+step=21/21 accuracy=60.96% dt=0m13s
+accuracy=60.96%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=256,learning_rate=0.03,seed=0/gsm8k.json
+step=1/21 accuracy=56.25% dt=0m26s
+step=2/21 accuracy=62.50% dt=0m26s
+step=3/21 accuracy=64.06% dt=0m18s
+step=4/21 accuracy=66.02% dt=0m26s
+step=5/21 accuracy=65.00% dt=0m12s
+step=6/21 accuracy=63.02% dt=0m15s
+step=7/21 accuracy=62.72% dt=0m13s
+step=8/21 accuracy=63.28% dt=0m14s
+step=9/21 accuracy=63.72% dt=0m15s
+step=10/21 accuracy=64.06% dt=0m26s
+step=11/21 accuracy=65.20% dt=0m13s
+step=12/21 accuracy=65.62% dt=0m18s
+step=13/21 accuracy=64.78% dt=0m26s
+step=14/21 accuracy=65.62% dt=0m13s
+step=15/21 accuracy=65.10% dt=0m19s
+step=16/21 accuracy=64.65% dt=0m15s
+step=17/21 accuracy=64.25% dt=0m16s
+step=18/21 accuracy=63.54% dt=0m26s
+step=19/21 accuracy=63.08% dt=0m14s
+step=20/21 accuracy=63.12% dt=0m13s
+step=21/21 accuracy=62.93% dt=0m17s
+accuracy=62.93%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=256,learning_rate=0.1,seed=0/gsm8k.json
+step=1/21 accuracy=56.25% dt=0m25s
+step=2/21 accuracy=59.38% dt=0m11s
+step=3/21 accuracy=60.42% dt=0m25s
+step=4/21 accuracy=62.89% dt=0m12s
+step=5/21 accuracy=62.19% dt=0m25s
+step=6/21 accuracy=60.94% dt=0m18s
+step=7/21 accuracy=61.38% dt=0m16s
+step=8/21 accuracy=61.52% dt=0m16s
+step=9/21 accuracy=61.63% dt=0m14s
+step=10/21 accuracy=61.56% dt=0m25s
+step=11/21 accuracy=61.79% dt=0m14s
+step=12/21 accuracy=61.98% dt=0m15s
+step=13/21 accuracy=61.90% dt=0m18s
+step=14/21 accuracy=62.61% dt=0m14s
+step=15/21 accuracy=62.19% dt=0m14s
+step=16/21 accuracy=61.91% dt=0m16s
+step=17/21 accuracy=61.76% dt=0m15s
+step=18/21 accuracy=61.37% dt=0m25s
+step=19/21 accuracy=61.51% dt=0m14s
+step=20/21 accuracy=61.09% dt=0m14s
+step=21/21 accuracy=61.11% dt=0m14s
+accuracy=61.11%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.003,seed=0/gsm8k.json
+step=1/21 accuracy=59.38% dt=0m25s
+step=2/21 accuracy=61.72% dt=0m12s
+step=3/21 accuracy=61.98% dt=0m25s
+step=4/21 accuracy=63.67% dt=0m11s
+step=5/21 accuracy=64.06% dt=0m25s
+step=6/21 accuracy=63.28% dt=0m18s
+step=7/21 accuracy=61.83% dt=0m13s
+step=8/21 accuracy=62.30% dt=0m15s
+step=9/21 accuracy=62.50% dt=0m13s
+step=10/21 accuracy=62.97% dt=0m25s
+step=11/21 accuracy=62.64% dt=0m14s
+step=12/21 accuracy=62.76% dt=0m16s
+step=13/21 accuracy=62.50% dt=0m25s
+step=14/21 accuracy=63.06% dt=0m21s
+step=15/21 accuracy=62.71% dt=0m25s
+step=16/21 accuracy=62.50% dt=0m21s
+step=17/21 accuracy=61.95% dt=0m15s
+step=18/21 accuracy=61.81% dt=0m14s
+step=19/21 accuracy=61.92% dt=0m16s
+step=20/21 accuracy=62.03% dt=0m20s
+step=21/21 accuracy=61.87% dt=0m13s
+accuracy=61.87%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.01,seed=0/gsm8k.json
+step=1/21 accuracy=50.00% dt=0m12s
+step=2/21 accuracy=55.47% dt=0m18s
+step=3/21 accuracy=57.29% dt=0m25s
+step=4/21 accuracy=60.55% dt=0m25s
+step=5/21 accuracy=62.19% dt=0m12s
+step=6/21 accuracy=61.72% dt=0m23s
+step=7/21 accuracy=60.94% dt=0m16s
+step=8/21 accuracy=61.72% dt=0m25s
+step=9/21 accuracy=62.33% dt=0m11s
+step=10/21 accuracy=62.81% dt=0m25s
+step=11/21 accuracy=62.78% dt=0m16s
+step=12/21 accuracy=63.41% dt=0m19s
+step=13/21 accuracy=62.74% dt=0m16s
+step=14/21 accuracy=63.73% dt=0m14s
+step=15/21 accuracy=62.81% dt=0m15s
+step=16/21 accuracy=62.30% dt=0m25s
+step=17/21 accuracy=62.13% dt=0m17s
+step=18/21 accuracy=61.72% dt=0m15s
+step=19/21 accuracy=61.43% dt=0m25s
+step=20/21 accuracy=61.25% dt=0m12s
+step=21/21 accuracy=61.33% dt=0m14s
+accuracy=61.33%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.03,seed=0/gsm8k.json
+step=1/21 accuracy=56.25% dt=0m24s
+step=2/21 accuracy=60.16% dt=0m24s
+step=3/21 accuracy=59.90% dt=0m25s
+step=4/21 accuracy=62.11% dt=0m12s
+step=5/21 accuracy=60.62% dt=0m13s
+step=6/21 accuracy=60.94% dt=0m16s
+step=7/21 accuracy=61.61% dt=0m13s
+step=8/21 accuracy=62.30% dt=0m13s
+step=9/21 accuracy=62.67% dt=0m12s
+step=10/21 accuracy=62.97% dt=0m13s
+step=11/21 accuracy=62.78% dt=0m25s
+step=12/21 accuracy=63.28% dt=0m16s
+step=13/21 accuracy=62.98% dt=0m19s
+step=14/21 accuracy=63.73% dt=0m14s
+step=15/21 accuracy=63.85% dt=0m15s
+step=16/21 accuracy=63.67% dt=0m16s
+step=17/21 accuracy=62.96% dt=0m18s
+step=18/21 accuracy=63.02% dt=0m24s
+step=19/21 accuracy=62.83% dt=0m15s
+step=20/21 accuracy=62.42% dt=0m25s
+step=21/21 accuracy=62.47% dt=0m11s
+accuracy=62.47%
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.1,seed=0/gsm8k.json

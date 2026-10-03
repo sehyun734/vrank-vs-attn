@@ -1,0 +1,161 @@
+
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]
+Loading weights:   1%|          | 1/146 [00:00<00:16,  8.81it/s]
+Loading weights:  21%|██        | 30/146 [00:00<00:00, 163.83it/s]
+Loading weights:  40%|███▉      | 58/146 [00:00<00:00, 213.27it/s]
+Loading weights:  59%|█████▉    | 86/146 [00:00<00:00, 236.75it/s]
+Loading weights:  82%|████████▏ | 120/146 [00:00<00:00, 266.44it/s]
+Loading weights: 100%|██████████| 146/146 [00:00<00:00, 238.64it/s]
+
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]
+Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 218098.55 examples/s]
+
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]
+Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 272660.77 examples/s]
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+step=1/21 accuracy=21.88% dt=0m10s
+step=2/21 accuracy=25.78% dt=0m17s
+step=3/21 accuracy=25.52% dt=0m16s
+step=4/21 accuracy=24.22% dt=0m17s
+step=5/21 accuracy=24.06% dt=0m10s
+step=6/21 accuracy=24.22% dt=0m07s
+step=7/21 accuracy=23.21% dt=0m16s
+step=8/21 accuracy=23.63% dt=0m08s
+step=9/21 accuracy=23.96% dt=0m07s
+step=10/21 accuracy=23.12% dt=0m16s
+step=11/21 accuracy=23.15% dt=0m16s
+step=12/21 accuracy=23.44% dt=0m16s
+step=13/21 accuracy=23.20% dt=0m16s
+step=14/21 accuracy=23.44% dt=0m16s
+step=15/21 accuracy=23.44% dt=0m13s
+step=16/21 accuracy=23.63% dt=0m17s
+step=17/21 accuracy=23.35% dt=0m09s
+step=18/21 accuracy=23.35% dt=0m17s
+step=19/21 accuracy=22.94% dt=0m10s
+step=20/21 accuracy=22.89% dt=0m10s
+step=21/21 accuracy=22.82% dt=0m06s
+path=lora/rank=16,learning_rate=0.0001,seed=0 accuracy=22.82%
+step=1/21 accuracy=21.88% dt=0m09s
+step=2/21 accuracy=28.12% dt=0m16s
+step=3/21 accuracy=30.21% dt=0m16s
+step=4/21 accuracy=31.25% dt=0m16s
+step=5/21 accuracy=30.94% dt=0m16s
+step=6/21 accuracy=30.47% dt=0m08s
+step=7/21 accuracy=29.24% dt=0m09s
+step=8/21 accuracy=30.08% dt=0m09s
+step=9/21 accuracy=29.69% dt=0m09s
+step=10/21 accuracy=28.91% dt=0m16s
+step=11/21 accuracy=29.12% dt=0m08s
+step=12/21 accuracy=29.56% dt=0m09s
+step=13/21 accuracy=29.69% dt=0m07s
+step=14/21 accuracy=30.02% dt=0m17s
+step=15/21 accuracy=30.21% dt=0m16s
+step=16/21 accuracy=30.08% dt=0m16s
+step=17/21 accuracy=29.41% dt=0m10s
+step=18/21 accuracy=29.43% dt=0m09s
+step=19/21 accuracy=28.78% dt=0m09s
+step=20/21 accuracy=28.98% dt=0m09s
+step=21/21 accuracy=29.11% dt=0m06s
+path=lora/rank=16,learning_rate=0.0003,seed=0 accuracy=29.11%
+step=1/21 accuracy=23.44% dt=0m07s
+step=2/21 accuracy=35.94% dt=0m17s
+step=3/21 accuracy=36.46% dt=0m11s
+step=4/21 accuracy=35.94% dt=0m11s
+step=5/21 accuracy=35.94% dt=0m12s
+step=6/21 accuracy=35.94% dt=0m08s
+step=7/21 accuracy=33.93% dt=0m08s
+step=8/21 accuracy=34.57% dt=0m08s
+step=9/21 accuracy=35.42% dt=0m16s
+step=10/21 accuracy=34.84% dt=0m17s
+step=11/21 accuracy=35.09% dt=0m07s
+step=12/21 accuracy=35.16% dt=0m17s
+step=13/21 accuracy=35.58% dt=0m10s
+step=14/21 accuracy=35.94% dt=0m10s
+step=15/21 accuracy=36.35% dt=0m17s
+step=16/21 accuracy=35.94% dt=0m09s
+step=17/21 accuracy=35.57% dt=0m08s
+step=18/21 accuracy=35.68% dt=0m08s
+step=19/21 accuracy=35.61% dt=0m17s
+step=20/21 accuracy=36.02% dt=0m08s
+step=21/21 accuracy=36.01% dt=0m09s
+path=lora/rank=16,learning_rate=0.001,seed=0 accuracy=36.01%
+step=1/21 accuracy=28.12% dt=0m10s
+step=2/21 accuracy=32.03% dt=0m08s
+step=3/21 accuracy=33.33% dt=0m17s
+step=4/21 accuracy=35.55% dt=0m11s
+step=5/21 accuracy=36.88% dt=0m07s
+step=6/21 accuracy=36.98% dt=0m17s
+step=7/21 accuracy=35.71% dt=0m11s
+step=8/21 accuracy=36.52% dt=0m12s
+step=9/21 accuracy=36.81% dt=0m17s
+step=10/21 accuracy=35.62% dt=0m18s
+step=11/21 accuracy=35.37% dt=0m12s
+step=12/21 accuracy=36.33% dt=0m07s
+step=13/21 accuracy=36.30% dt=0m09s
+step=14/21 accuracy=37.39% dt=0m08s
+step=15/21 accuracy=37.71% dt=0m17s
+step=16/21 accuracy=37.21% dt=0m08s
+step=17/21 accuracy=36.76% dt=0m07s
+step=18/21 accuracy=36.63% dt=0m12s
+step=19/21 accuracy=36.27% dt=0m17s
+step=20/21 accuracy=35.86% dt=0m09s
+step=21/21 accuracy=35.86% dt=0m11s
+path=lora/rank=16,learning_rate=0.003,seed=0 accuracy=35.86%
+step=1/21 accuracy=12.50% dt=0m17s
+step=2/21 accuracy=16.41% dt=0m17s
+step=3/21 accuracy=16.15% dt=0m09s
+step=4/21 accuracy=17.19% dt=0m17s
+step=5/21 accuracy=18.12% dt=0m17s
+step=6/21 accuracy=19.79% dt=0m17s
+step=7/21 accuracy=18.97% dt=0m17s
+step=8/21 accuracy=18.36% dt=0m17s
+step=9/21 accuracy=18.58% dt=0m17s
+step=10/21 accuracy=18.28% dt=0m17s
+step=11/21 accuracy=18.04% dt=0m17s
+step=12/21 accuracy=18.23% dt=0m09s
+step=13/21 accuracy=18.39% dt=0m17s
+step=14/21 accuracy=18.30% dt=0m17s
+step=15/21 accuracy=18.65% dt=0m17s
+step=16/21 accuracy=18.65% dt=0m17s
+step=17/21 accuracy=18.47% dt=0m09s
+step=18/21 accuracy=18.58% dt=0m17s
+step=19/21 accuracy=18.26% dt=0m17s
+step=20/21 accuracy=17.89% dt=0m17s
+step=21/21 accuracy=17.82% dt=0m11s
+path=lora/rank=4,learning_rate=0.0001,seed=0 accuracy=17.82%
+step=1/21 accuracy=14.06% dt=0m10s
+step=2/21 accuracy=19.53% dt=0m17s
+step=3/21 accuracy=22.40% dt=0m17s
+step=4/21 accuracy=22.27% dt=0m08s
+step=5/21 accuracy=22.81% dt=0m07s
+step=6/21 accuracy=23.18% dt=0m07s
+step=7/21 accuracy=22.10% dt=0m17s
+step=8/21 accuracy=21.88% dt=0m17s
+step=9/21 accuracy=21.88% dt=0m17s
+step=10/21 accuracy=21.88% dt=0m17s
+step=11/21 accuracy=22.02% dt=0m08s
+step=12/21 accuracy=22.14% dt=0m17s
+step=13/21 accuracy=22.24% dt=0m11s
+step=14/21 accuracy=22.77% dt=0m17s
+step=15/21 accuracy=22.81% dt=0m17s
+step=16/21 accuracy=22.95% dt=0m17s
+step=17/21 accuracy=22.61% dt=0m17s
+step=18/21 accuracy=22.74% dt=0m17s
+step=19/21 accuracy=22.45% dt=0m17s
+step=20/21 accuracy=22.50% dt=0m17s
+step=21/21 accuracy=22.44% dt=0m08s
+path=lora/rank=4,learning_rate=0.0003,seed=0 accuracy=22.44%
+step=1/21 accuracy=21.88% dt=0m17s
+step=2/21 accuracy=29.69% dt=0m17s
+step=3/21 accuracy=28.65% dt=0m17s
+step=4/21 accuracy=29.30% dt=0m08s
+step=5/21 accuracy=27.81% dt=0m17s
+step=6/21 accuracy=27.86% dt=0m17s
+step=7/21 accuracy=27.46% dt=0m08s
+step=8/21 accuracy=27.93% dt=0m17s
+step=9/21 accuracy=27.60% dt=0m08s
+step=10/21 accuracy=27.34% dt=0m17s
+step=11/21 accuracy=27.41% dt=0m07s
+step=12/21 accuracy=27.86% dt=0m08s
+step=13/21 accuracy=28.25% dt=0m11s
+step=14/21 accuracy=28.57% dt=0m08s

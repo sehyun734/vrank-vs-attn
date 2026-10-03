@@ -1,0 +1,64 @@
+
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]
+Loading weights:   1%|          | 1/146 [00:00<00:17,  8.41it/s]
+Loading weights:  21%|██        | 31/146 [00:00<00:00, 164.80it/s]
+Loading weights:  40%|████      | 59/146 [00:00<00:00, 213.11it/s]
+Loading weights:  62%|██████▏   | 91/146 [00:00<00:00, 253.49it/s]
+Loading weights:  82%|████████▏ | 120/146 [00:00<00:00, 264.46it/s]
+Loading weights: 100%|██████████| 146/146 [00:00<00:00, 238.71it/s]
+
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]
+Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 219343.97 examples/s]
+
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]
+Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 304005.22 examples/s]
+pending=2
+  prefix/prefix_len=256,learning_rate=0.0001,seed=0
+  prefix/prefix_len=256,learning_rate=0.0003,seed=0
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+step=1/21 accuracy=15.62% dt=0m16s
+step=2/21 accuracy=19.53% dt=0m06s
+step=3/21 accuracy=20.31% dt=0m15s
+step=4/21 accuracy=19.92% dt=0m14s
+step=5/21 accuracy=19.06% dt=0m14s
+step=6/21 accuracy=20.31% dt=0m14s
+step=7/21 accuracy=18.75% dt=0m14s
+step=8/21 accuracy=19.34% dt=0m15s
+step=9/21 accuracy=18.92% dt=0m14s
+step=10/21 accuracy=18.91% dt=0m14s
+step=11/21 accuracy=18.75% dt=0m15s
+step=12/21 accuracy=18.75% dt=0m07s
+step=13/21 accuracy=18.99% dt=0m14s
+step=14/21 accuracy=18.97% dt=0m14s
+step=15/21 accuracy=19.27% dt=0m15s
+step=16/21 accuracy=19.24% dt=0m15s
+step=17/21 accuracy=19.12% dt=0m15s
+step=18/21 accuracy=18.92% dt=0m14s
+step=19/21 accuracy=18.83% dt=0m15s
+step=20/21 accuracy=18.36% dt=0m15s
+step=21/21 accuracy=18.35% dt=0m13s
+accuracy=18.35%
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=256,learning_rate=0.0001,seed=0/gsm8k.json
+step=1/21 accuracy=18.75% dt=0m14s
+step=2/21 accuracy=23.44% dt=0m14s
+step=3/21 accuracy=22.92% dt=0m08s
+step=4/21 accuracy=23.05% dt=0m14s
+step=5/21 accuracy=22.19% dt=0m14s
+step=6/21 accuracy=22.40% dt=0m08s
+step=7/21 accuracy=20.98% dt=0m14s
+step=8/21 accuracy=22.27% dt=0m15s
+step=9/21 accuracy=22.57% dt=0m14s
+step=10/21 accuracy=22.19% dt=0m14s
+step=11/21 accuracy=21.45% dt=0m15s
+step=12/21 accuracy=21.22% dt=0m14s
+step=13/21 accuracy=21.63% dt=0m14s
+step=14/21 accuracy=22.10% dt=0m14s
+step=15/21 accuracy=22.50% dt=0m15s
+step=16/21 accuracy=22.17% dt=0m15s
+step=17/21 accuracy=21.60% dt=0m15s
+step=18/21 accuracy=21.96% dt=0m06s
+step=19/21 accuracy=22.20% dt=0m15s
+step=20/21 accuracy=21.80% dt=0m15s
+step=21/21 accuracy=21.76% dt=0m06s
+accuracy=21.76%
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=256,learning_rate=0.0003,seed=0/gsm8k.json

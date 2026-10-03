@@ -1,0 +1,184 @@
+
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]
+Loading weights:   1%|          | 1/146 [00:00<00:19,  7.26it/s]
+Loading weights:  22%|██▏       | 32/146 [00:00<00:00, 159.99it/s]
+Loading weights:  45%|████▌     | 66/146 [00:00<00:00, 227.91it/s]
+Loading weights:  64%|██████▍   | 94/146 [00:00<00:00, 245.10it/s]
+Loading weights:  84%|████████▎ | 122/146 [00:00<00:00, 255.21it/s]
+Loading weights: 100%|██████████| 146/146 [00:00<00:00, 235.54it/s]
+
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]
+Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 252304.45 examples/s]
+
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]
+Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 290836.24 examples/s]
+pending=7
+  prefix/prefix_len=16,learning_rate=0.0001,seed=0
+  prefix/prefix_len=16,learning_rate=0.0003,seed=0
+  prefix/prefix_len=16,learning_rate=0.001,seed=0
+  prefix/prefix_len=16,learning_rate=0.003,seed=0
+  prefix/prefix_len=64,learning_rate=0.0001,seed=0
+  prefix/prefix_len=64,learning_rate=0.0003,seed=0
+  prefix/prefix_len=64,learning_rate=0.001,seed=0
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+step=1/21 accuracy=15.62% dt=0m15s
+step=2/21 accuracy=21.09% dt=0m13s
+step=3/21 accuracy=21.88% dt=0m13s
+step=4/21 accuracy=22.27% dt=0m13s
+step=5/21 accuracy=21.25% dt=0m13s
+step=6/21 accuracy=20.05% dt=0m13s
+step=7/21 accuracy=18.30% dt=0m13s
+step=8/21 accuracy=18.95% dt=0m13s
+step=9/21 accuracy=18.58% dt=0m13s
+step=10/21 accuracy=17.97% dt=0m13s
+step=11/21 accuracy=17.33% dt=0m08s
+step=12/21 accuracy=17.06% dt=0m13s
+step=13/21 accuracy=17.67% dt=0m13s
+step=14/21 accuracy=17.75% dt=0m13s
+step=15/21 accuracy=17.81% dt=0m13s
+step=16/21 accuracy=17.77% dt=0m13s
+step=17/21 accuracy=17.74% dt=0m13s
+step=18/21 accuracy=17.53% dt=0m13s
+step=19/21 accuracy=17.27% dt=0m13s
+step=20/21 accuracy=17.27% dt=0m13s
+step=21/21 accuracy=17.21% dt=0m05s
+accuracy=17.21%
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.0001,seed=0/gsm8k.json
+step=1/21 accuracy=14.06% dt=0m13s
+step=2/21 accuracy=19.53% dt=0m13s
+step=3/21 accuracy=21.88% dt=0m13s
+step=4/21 accuracy=23.44% dt=0m13s
+step=5/21 accuracy=20.94% dt=0m13s
+step=6/21 accuracy=20.31% dt=0m13s
+step=7/21 accuracy=18.97% dt=0m07s
+step=8/21 accuracy=19.73% dt=0m05s
+step=9/21 accuracy=19.44% dt=0m08s
+step=10/21 accuracy=19.53% dt=0m13s
+step=11/21 accuracy=20.17% dt=0m13s
+step=12/21 accuracy=20.18% dt=0m07s
+step=13/21 accuracy=20.31% dt=0m13s
+step=14/21 accuracy=20.98% dt=0m13s
+step=15/21 accuracy=20.83% dt=0m13s
+step=16/21 accuracy=20.80% dt=0m10s
+step=17/21 accuracy=20.68% dt=0m13s
+step=18/21 accuracy=21.01% dt=0m06s
+step=19/21 accuracy=20.72% dt=0m13s
+step=20/21 accuracy=20.55% dt=0m07s
+step=21/21 accuracy=20.55% dt=0m13s
+accuracy=20.55%
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.0003,seed=0/gsm8k.json
+step=1/21 accuracy=15.62% dt=0m13s
+step=2/21 accuracy=22.66% dt=0m13s
+step=3/21 accuracy=23.96% dt=0m13s
+step=4/21 accuracy=25.78% dt=0m13s
+step=5/21 accuracy=24.38% dt=0m13s
+step=6/21 accuracy=24.48% dt=0m13s
+step=7/21 accuracy=23.66% dt=0m07s
+step=8/21 accuracy=24.41% dt=0m13s
+step=9/21 accuracy=25.17% dt=0m09s
+step=10/21 accuracy=24.53% dt=0m13s
+step=11/21 accuracy=23.58% dt=0m13s
+step=12/21 accuracy=23.96% dt=0m07s
+step=13/21 accuracy=24.16% dt=0m13s
+step=14/21 accuracy=23.77% dt=0m06s
+step=15/21 accuracy=24.38% dt=0m07s
+step=16/21 accuracy=24.22% dt=0m13s
+step=17/21 accuracy=24.08% dt=0m06s
+step=18/21 accuracy=23.87% dt=0m07s
+step=19/21 accuracy=23.19% dt=0m13s
+step=20/21 accuracy=23.44% dt=0m13s
+step=21/21 accuracy=23.12% dt=0m13s
+accuracy=23.12%
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.001,seed=0/gsm8k.json
+step=1/21 accuracy=4.69% dt=0m13s
+step=2/21 accuracy=4.69% dt=0m13s
+step=3/21 accuracy=4.17% dt=0m13s
+step=4/21 accuracy=3.52% dt=0m13s
+step=5/21 accuracy=3.44% dt=0m13s
+step=6/21 accuracy=3.39% dt=0m13s
+step=7/21 accuracy=3.12% dt=0m13s
+step=8/21 accuracy=3.32% dt=0m13s
+step=9/21 accuracy=2.95% dt=0m13s
+step=10/21 accuracy=2.66% dt=0m13s
+step=11/21 accuracy=2.56% dt=0m13s
+step=12/21 accuracy=2.73% dt=0m13s
+step=13/21 accuracy=2.64% dt=0m13s
+step=14/21 accuracy=2.57% dt=0m13s
+step=15/21 accuracy=2.50% dt=0m13s
+step=16/21 accuracy=2.54% dt=0m13s
+step=17/21 accuracy=2.39% dt=0m13s
+step=18/21 accuracy=2.52% dt=0m13s
+step=19/21 accuracy=2.63% dt=0m13s
+step=20/21 accuracy=2.58% dt=0m13s
+step=21/21 accuracy=2.50% dt=0m13s
+accuracy=2.50%
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.003,seed=0/gsm8k.json
+step=1/21 accuracy=12.50% dt=0m13s
+step=2/21 accuracy=17.97% dt=0m13s
+step=3/21 accuracy=19.79% dt=0m07s
+step=4/21 accuracy=21.09% dt=0m13s
+step=5/21 accuracy=20.31% dt=0m06s
+step=6/21 accuracy=21.09% dt=0m13s
+step=7/21 accuracy=19.42% dt=0m13s
+step=8/21 accuracy=20.12% dt=0m13s
+step=9/21 accuracy=19.10% dt=0m06s
+step=10/21 accuracy=18.91% dt=0m13s
+step=11/21 accuracy=18.61% dt=0m13s
+step=12/21 accuracy=18.62% dt=0m13s
+step=13/21 accuracy=19.23% dt=0m13s
+step=14/21 accuracy=19.20% dt=0m07s
+step=15/21 accuracy=20.21% dt=0m06s
+step=16/21 accuracy=20.02% dt=0m13s
+step=17/21 accuracy=19.67% dt=0m14s
+step=18/21 accuracy=20.14% dt=0m13s
+step=19/21 accuracy=19.90% dt=0m13s
+step=20/21 accuracy=19.77% dt=0m08s
+step=21/21 accuracy=19.79% dt=0m05s
+accuracy=19.79%
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.0001,seed=0/gsm8k.json
+step=1/21 accuracy=17.19% dt=0m13s
+step=2/21 accuracy=21.09% dt=0m07s
+step=3/21 accuracy=20.83% dt=0m13s
+step=4/21 accuracy=22.66% dt=0m07s
+step=5/21 accuracy=23.75% dt=0m06s
+step=6/21 accuracy=23.44% dt=0m06s
+step=7/21 accuracy=21.43% dt=0m13s
+step=8/21 accuracy=22.07% dt=0m07s
+step=9/21 accuracy=22.22% dt=0m08s
+step=10/21 accuracy=21.88% dt=0m13s
+step=11/21 accuracy=21.45% dt=0m13s
+step=12/21 accuracy=22.14% dt=0m07s
+step=13/21 accuracy=22.72% dt=0m13s
+step=14/21 accuracy=23.33% dt=0m06s
+step=15/21 accuracy=23.33% dt=0m13s
+step=16/21 accuracy=23.44% dt=0m13s
+step=17/21 accuracy=23.25% dt=0m14s
+step=18/21 accuracy=22.92% dt=0m13s
+step=19/21 accuracy=22.62% dt=0m14s
+step=20/21 accuracy=22.34% dt=0m13s
+step=21/21 accuracy=22.14% dt=0m06s
+accuracy=22.14%
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.0003,seed=0/gsm8k.json
+step=1/21 accuracy=21.88% dt=0m06s
+step=2/21 accuracy=27.34% dt=0m13s
+step=3/21 accuracy=28.65% dt=0m13s
+step=4/21 accuracy=28.12% dt=0m13s
+step=5/21 accuracy=27.19% dt=0m07s
+step=6/21 accuracy=26.04% dt=0m13s
+step=7/21 accuracy=24.55% dt=0m13s
+step=8/21 accuracy=24.02% dt=0m13s
+step=9/21 accuracy=24.65% dt=0m06s
+step=10/21 accuracy=25.00% dt=0m13s
+step=11/21 accuracy=24.43% dt=0m13s
+step=12/21 accuracy=24.61% dt=0m06s
+step=13/21 accuracy=24.88% dt=0m07s
+step=14/21 accuracy=25.00% dt=0m13s
+step=15/21 accuracy=25.31% dt=0m05s
+step=16/21 accuracy=24.90% dt=0m13s
+step=17/21 accuracy=24.82% dt=0m14s
+step=18/21 accuracy=25.09% dt=0m13s
+step=19/21 accuracy=24.84% dt=0m13s
+step=20/21 accuracy=24.45% dt=0m13s
+step=21/21 accuracy=24.49% dt=0m06s
+accuracy=24.49%
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.001,seed=0/gsm8k.json

@@ -1,0 +1,85 @@
+
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]
+Loading weights:  25%|██▌       | 79/310 [00:00<00:00, 779.52it/s]
+Loading weights:  68%|██████▊   | 210/310 [00:00<00:00, 1087.85it/s]
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 1112.04it/s]
+
+Generating train split:   0%|          | 0/395000 [00:00<?, ? examples/s]
+Generating train split: 100%|██████████| 395000/395000 [00:06<00:00, 61943.96 examples/s]
+Generating train split: 100%|██████████| 395000/395000 [00:06<00:00, 61641.03 examples/s]
+pending=25
+  base
+  lora/rank=16,learning_rate=0.0001,seed=0
+  lora/rank=16,learning_rate=0.0003,seed=0
+  lora/rank=16,learning_rate=0.001,seed=0
+  lora/rank=16,learning_rate=0.003,seed=0
+  lora/rank=4,learning_rate=0.0001,seed=0
+  lora/rank=4,learning_rate=0.0003,seed=0
+  lora/rank=4,learning_rate=0.001,seed=0
+  lora/rank=4,learning_rate=0.003,seed=0
+  lora/rank=64,learning_rate=0.0001,seed=0
+  lora/rank=64,learning_rate=0.0003,seed=0
+  lora/rank=64,learning_rate=0.001,seed=0
+  lora/rank=64,learning_rate=0.003,seed=0
+  prefix/prefix_len=16,learning_rate=0.003,seed=0
+  prefix/prefix_len=16,learning_rate=0.01,seed=0
+  prefix/prefix_len=16,learning_rate=0.03,seed=0
+  prefix/prefix_len=16,learning_rate=0.1,seed=0
+  prefix/prefix_len=256,learning_rate=0.003,seed=0
+  prefix/prefix_len=256,learning_rate=0.01,seed=0
+  prefix/prefix_len=256,learning_rate=0.03,seed=0
+  prefix/prefix_len=256,learning_rate=0.1,seed=0
+  prefix/prefix_len=64,learning_rate=0.003,seed=0
+  prefix/prefix_len=64,learning_rate=0.01,seed=0
+  prefix/prefix_len=64,learning_rate=0.03,seed=0
+  prefix/prefix_len=64,learning_rate=0.1,seed=0
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/base/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/base/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=16,learning_rate=0.0001,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=16,learning_rate=0.0001,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=16,learning_rate=0.0003,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=16,learning_rate=0.0003,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=16,learning_rate=0.001,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=16,learning_rate=0.001,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=16,learning_rate=0.003,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=16,learning_rate=0.003,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=4,learning_rate=0.0001,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=4,learning_rate=0.0001,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=4,learning_rate=0.0003,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=4,learning_rate=0.0003,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=4,learning_rate=0.001,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=4,learning_rate=0.001,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=4,learning_rate=0.003,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=4,learning_rate=0.003,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=64,learning_rate=0.0001,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=64,learning_rate=0.0001,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=64,learning_rate=0.0003,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=64,learning_rate=0.0003,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=64,learning_rate=0.001,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=64,learning_rate=0.001,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=64,learning_rate=0.003,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/lora/rank=64,learning_rate=0.003,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.003,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.003,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.01,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.01,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.03,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.03,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.1,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.1,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=256,learning_rate=0.003,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=256,learning_rate=0.003,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=256,learning_rate=0.01,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=256,learning_rate=0.01,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=256,learning_rate=0.03,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=256,learning_rate=0.03,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=256,learning_rate=0.1,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=256,learning_rate=0.1,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.003,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.003,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.01,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.01,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.03,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.03,seed=0/attn.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.1,seed=0/vrank.json
+save=sehyun734/Qwen3-0.6B-Base-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.1,seed=0/attn.json

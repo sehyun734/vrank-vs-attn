@@ -1,0 +1,86 @@
+
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]
+Loading weights:   1%|          | 1/146 [00:00<00:16,  8.60it/s]
+Loading weights:  21%|██        | 30/146 [00:00<00:00, 162.34it/s]
+Loading weights:  40%|███▉      | 58/146 [00:00<00:00, 211.96it/s]
+Loading weights:  59%|█████▉    | 86/146 [00:00<00:00, 234.18it/s]
+Loading weights:  82%|████████▏ | 119/146 [00:00<00:00, 267.69it/s]
+Loading weights: 100%|██████████| 146/146 [00:00<00:00, 235.70it/s]
+
+Generating train split:   0%|          | 0/395000 [00:00<?, ? examples/s]
+Generating train split: 100%|██████████| 395000/395000 [00:06<00:00, 62445.48 examples/s]
+Generating train split: 100%|██████████| 395000/395000 [00:06<00:00, 62139.45 examples/s]
+pending=20
+  base
+  lora/rank=16,learning_rate=0.0001,seed=0
+  lora/rank=16,learning_rate=0.0003,seed=0
+  lora/rank=16,learning_rate=0.001,seed=0
+  lora/rank=16,learning_rate=0.003,seed=0
+  lora/rank=4,learning_rate=0.0001,seed=0
+  lora/rank=4,learning_rate=0.0003,seed=0
+  lora/rank=4,learning_rate=0.001,seed=0
+  lora/rank=4,learning_rate=0.003,seed=0
+  lora/rank=64,learning_rate=0.0001,seed=0
+  lora/rank=64,learning_rate=0.0003,seed=0
+  lora/rank=64,learning_rate=0.001,seed=0
+  lora/rank=64,learning_rate=0.003,seed=0
+  prefix/prefix_len=16,learning_rate=0.0001,seed=0
+  prefix/prefix_len=16,learning_rate=0.0003,seed=0
+  prefix/prefix_len=16,learning_rate=0.001,seed=0
+  prefix/prefix_len=16,learning_rate=0.003,seed=0
+  prefix/prefix_len=64,learning_rate=0.0001,seed=0
+  prefix/prefix_len=64,learning_rate=0.0003,seed=0
+  prefix/prefix_len=64,learning_rate=0.001,seed=0
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/base/vrank.json
+No files have been modified since last commit. Skipping to prevent empty commit.
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/base/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=16,learning_rate=0.0001,seed=0/vrank.json
+No files have been modified since last commit. Skipping to prevent empty commit.
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=16,learning_rate=0.0001,seed=0/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=16,learning_rate=0.0003,seed=0/vrank.json
+No files have been modified since last commit. Skipping to prevent empty commit.
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=16,learning_rate=0.0003,seed=0/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=16,learning_rate=0.001,seed=0/vrank.json
+No files have been modified since last commit. Skipping to prevent empty commit.
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=16,learning_rate=0.001,seed=0/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=16,learning_rate=0.003,seed=0/vrank.json
+No files have been modified since last commit. Skipping to prevent empty commit.
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=16,learning_rate=0.003,seed=0/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=4,learning_rate=0.0001,seed=0/vrank.json
+No files have been modified since last commit. Skipping to prevent empty commit.
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=4,learning_rate=0.0001,seed=0/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=4,learning_rate=0.0003,seed=0/vrank.json
+No files have been modified since last commit. Skipping to prevent empty commit.
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=4,learning_rate=0.0003,seed=0/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=4,learning_rate=0.001,seed=0/vrank.json
+No files have been modified since last commit. Skipping to prevent empty commit.
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=4,learning_rate=0.001,seed=0/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=4,learning_rate=0.003,seed=0/vrank.json
+No files have been modified since last commit. Skipping to prevent empty commit.
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=4,learning_rate=0.003,seed=0/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=64,learning_rate=0.0001,seed=0/vrank.json
+No files have been modified since last commit. Skipping to prevent empty commit.
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=64,learning_rate=0.0001,seed=0/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=64,learning_rate=0.0003,seed=0/vrank.json
+No files have been modified since last commit. Skipping to prevent empty commit.
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=64,learning_rate=0.0003,seed=0/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=64,learning_rate=0.001,seed=0/vrank.json
+No files have been modified since last commit. Skipping to prevent empty commit.
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=64,learning_rate=0.001,seed=0/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=64,learning_rate=0.003,seed=0/vrank.json
+No files have been modified since last commit. Skipping to prevent empty commit.
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/lora/rank=64,learning_rate=0.003,seed=0/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.0001,seed=0/vrank.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.0001,seed=0/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.0003,seed=0/vrank.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.0003,seed=0/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.001,seed=0/vrank.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.001,seed=0/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.003,seed=0/vrank.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=16,learning_rate=0.003,seed=0/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.0001,seed=0/vrank.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.0001,seed=0/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.0003,seed=0/vrank.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.0003,seed=0/attn.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.001,seed=0/vrank.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.001,seed=0/attn.json

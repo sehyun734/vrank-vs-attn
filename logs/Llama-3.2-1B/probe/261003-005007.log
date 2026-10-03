@@ -1,0 +1,13 @@
+
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]
+Loading weights:   1%|          | 1/146 [00:00<00:18,  7.97it/s]
+Loading weights:  21%|██        | 31/146 [00:00<00:00, 161.30it/s]
+Loading weights:  40%|████      | 59/146 [00:00<00:00, 210.06it/s]
+Loading weights:  64%|██████▎   | 93/146 [00:00<00:00, 251.59it/s]
+Loading weights:  83%|████████▎ | 121/146 [00:00<00:00, 259.83it/s]
+Loading weights: 100%|██████████| 146/146 [00:00<00:00, 236.36it/s]
+
+Generating train split:   0%|          | 0/395000 [00:00<?, ? examples/s]
+Generating train split: 100%|██████████| 395000/395000 [00:06<00:00, 62728.17 examples/s]
+Generating train split: 100%|██████████| 395000/395000 [00:06<00:00, 62419.96 examples/s]
+pending=0

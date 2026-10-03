@@ -1,0 +1,179 @@
+
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]
+Loading weights:   1%|          | 1/146 [00:00<00:16,  8.65it/s]
+Loading weights:  21%|██        | 30/146 [00:00<00:00, 163.25it/s]
+Loading weights:  40%|███▉      | 58/146 [00:00<00:00, 213.15it/s]
+Loading weights:  59%|█████▉    | 86/146 [00:00<00:00, 236.55it/s]
+Loading weights:  82%|████████▏ | 120/146 [00:00<00:00, 266.34it/s]
+Loading weights: 100%|██████████| 146/146 [00:00<00:00, 238.34it/s]
+
+Generating train split:   0%|          | 0/395000 [00:00<?, ? examples/s]
+Generating train split: 100%|██████████| 395000/395000 [00:06<00:00, 61714.66 examples/s]
+Generating train split: 100%|██████████| 395000/395000 [00:06<00:00, 61262.64 examples/s]
+epoch=1/3 step=16/256 loss=0.7294 lr=1.26e-04 dt=0m35s mem=9.0GB
+epoch=1/3 step=32/256 loss=0.4956 lr=2.53e-04 dt=0m34s mem=9.2GB
+epoch=1/3 step=48/256 loss=0.4008 lr=3.00e-04 dt=0m34s mem=9.5GB
+epoch=1/3 step=64/256 loss=0.3731 lr=2.99e-04 dt=0m34s mem=9.6GB
+epoch=1/3 step=80/256 loss=0.3630 lr=2.98e-04 dt=0m35s mem=9.3GB
+epoch=1/3 step=96/256 loss=0.3739 lr=2.95e-04 dt=0m34s mem=10.0GB
+epoch=1/3 step=112/256 loss=0.3294 lr=2.92e-04 dt=0m35s mem=12.6GB
+epoch=1/3 step=128/256 loss=0.3139 lr=2.89e-04 dt=0m35s mem=9.9GB
+epoch=1/3 step=144/256 loss=0.3431 lr=2.85e-04 dt=0m34s mem=8.3GB
+epoch=1/3 step=160/256 loss=0.3249 lr=2.80e-04 dt=0m34s mem=9.5GB
+epoch=1/3 step=176/256 loss=0.3188 lr=2.74e-04 dt=0m35s mem=9.8GB
+epoch=1/3 step=192/256 loss=0.3137 lr=2.68e-04 dt=0m34s mem=10.3GB
+epoch=1/3 step=208/256 loss=0.3043 lr=2.62e-04 dt=0m35s mem=9.5GB
+epoch=1/3 step=224/256 loss=0.3089 lr=2.54e-04 dt=0m34s mem=8.9GB
+epoch=1/3 step=240/256 loss=0.3112 lr=2.47e-04 dt=0m34s mem=9.0GB
+epoch=1/3 step=256/256 loss=0.3070 lr=2.39e-04 dt=0m34s mem=9.9GB
+epoch=2/3 step=16/256 loss=0.3129 lr=2.30e-04 dt=0m34s mem=12.6GB
+epoch=2/3 step=32/256 loss=0.2910 lr=2.21e-04 dt=0m34s mem=9.5GB
+epoch=2/3 step=48/256 loss=0.2805 lr=2.12e-04 dt=0m34s mem=9.2GB
+epoch=2/3 step=64/256 loss=0.2736 lr=2.02e-04 dt=0m34s mem=9.4GB
+epoch=2/3 step=80/256 loss=0.2899 lr=1.93e-04 dt=0m35s mem=9.3GB
+epoch=2/3 step=96/256 loss=0.2859 lr=1.83e-04 dt=0m35s mem=9.9GB
+epoch=2/3 step=112/256 loss=0.2735 lr=1.73e-04 dt=0m34s mem=9.1GB
+epoch=2/3 step=128/256 loss=0.2962 lr=1.62e-04 dt=0m34s mem=9.9GB
+epoch=2/3 step=144/256 loss=0.2858 lr=1.52e-04 dt=0m34s mem=8.9GB
+epoch=2/3 step=160/256 loss=0.2667 lr=1.42e-04 dt=0m34s mem=10.0GB
+epoch=2/3 step=176/256 loss=0.2951 lr=1.31e-04 dt=0m34s mem=9.0GB
+epoch=2/3 step=192/256 loss=0.3017 lr=1.21e-04 dt=0m34s mem=9.2GB
+epoch=2/3 step=208/256 loss=0.2684 lr=1.11e-04 dt=0m34s mem=9.0GB
+epoch=2/3 step=224/256 loss=0.3141 lr=1.01e-04 dt=0m34s mem=8.6GB
+epoch=2/3 step=240/256 loss=0.2850 lr=9.16e-05 dt=0m35s mem=9.5GB
+epoch=2/3 step=256/256 loss=0.2783 lr=8.22e-05 dt=0m35s mem=10.3GB
+epoch=3/3 step=16/256 loss=0.2704 lr=7.31e-05 dt=0m34s mem=9.8GB
+epoch=3/3 step=32/256 loss=0.2663 lr=6.45e-05 dt=0m35s mem=8.8GB
+epoch=3/3 step=48/256 loss=0.2760 lr=5.62e-05 dt=0m34s mem=9.5GB
+epoch=3/3 step=64/256 loss=0.3021 lr=4.84e-05 dt=0m34s mem=9.1GB
+epoch=3/3 step=80/256 loss=0.2507 lr=4.10e-05 dt=0m34s mem=8.3GB
+epoch=3/3 step=96/256 loss=0.2764 lr=3.42e-05 dt=0m35s mem=10.0GB
+epoch=3/3 step=112/256 loss=0.2739 lr=2.79e-05 dt=0m35s mem=9.6GB
+epoch=3/3 step=128/256 loss=0.2499 lr=2.22e-05 dt=0m34s mem=9.2GB
+epoch=3/3 step=144/256 loss=0.2433 lr=1.71e-05 dt=0m35s mem=12.6GB
+epoch=3/3 step=160/256 loss=0.2515 lr=1.26e-05 dt=0m34s mem=8.2GB
+epoch=3/3 step=176/256 loss=0.2895 lr=8.80e-06 dt=0m35s mem=9.1GB
+epoch=3/3 step=192/256 loss=0.2785 lr=5.65e-06 dt=0m35s mem=9.9GB
+epoch=3/3 step=208/256 loss=0.2664 lr=3.19e-06 dt=0m35s mem=9.3GB
+epoch=3/3 step=224/256 loss=0.2638 lr=1.42e-06 dt=0m34s mem=10.3GB
+epoch=3/3 step=240/256 loss=0.2458 lr=3.55e-07 dt=0m34s mem=9.9GB
+epoch=3/3 step=256/256 loss=0.2847 lr=0.00e+00 dt=0m34s mem=8.7GB
+
+Processing Files (0 / 0)      : |          |  0.00B /  0.00B            
+
+New Data Upload               : |          |  0.00B /  0.00B            [A
+
+
+                              :  13%|█▎        |  552kB / 4.23MB            [A[A
+
+
+                              :  13%|█▎        |  552kB / 4.23MB            [A[A
+Processing Files (0 / 1)      :  13%|█▎        |  552kB / 4.23MB, 53.4kB/s  
+
+New Data Upload               :  13%|█▎        |  552kB / 4.23MB, 53.4kB/s  [A
+
+
+                              :  13%|█▎        |  552kB / 4.23MB            [A[A
+
+
+                              :  13%|█▎        |  552kB / 4.23MB            [A[A
+
+
+                              :  13%|█▎        |  552kB / 4.23MB            [A[A
+
+
+                              :  13%|█▎        |  552kB / 4.23MB            [A[A
+
+
+                              :  13%|█▎        |  552kB / 4.23MB            [A[A
+
+
+                              :  13%|█▎        |  552kB / 4.23MB            [A[A
+
+
+                              :  26%|██▌       | 1.10MB / 4.23MB            [A[A
+Processing Files (0 / 1)      :  26%|██▌       | 1.10MB / 4.23MB,  102kB/s  
+
+New Data Upload               :  26%|██▌       | 1.10MB / 4.23MB,  102kB/s  [A
+
+
+                              :  26%|██▌       | 1.10MB / 4.23MB            [A[A
+
+
+                              :  52%|█████▏    | 2.21MB / 4.23MB            [A[A
+Processing Files (0 / 1)      :  52%|█████▏    | 2.21MB / 4.23MB,  205kB/s  
+
+New Data Upload               :  52%|█████▏    | 2.21MB / 4.23MB,  205kB/s  [A
+
+
+                              :  52%|█████▏    | 2.21MB / 4.23MB            [A[A
+
+
+                              : 100%|█████████▉| 4.23MB / 4.23MB            [A[A
+Processing Files (0 / 1)      : 100%|█████████▉| 4.23MB / 4.23MB,  391kB/s  
+
+New Data Upload               : 100%|█████████▉| 4.23MB / 4.23MB,  391kB/s  [A
+
+
+                              : 100%|█████████▉| 4.23MB / 4.23MB            [A[A
+
+
+                              : 100%|█████████▉| 4.23MB / 4.23MB            [A[A
+
+
+                              : 100%|█████████▉| 4.23MB / 4.23MB            [A[A
+
+
+                              : 100%|█████████▉| 4.23MB / 4.23MB            [A[A
+
+
+                              : 100%|█████████▉| 4.23MB / 4.23MB            [A[A
+
+
+                              : 100%|█████████▉| 4.23MB / 4.23MB            [A[A
+
+
+                              : 100%|█████████▉| 4.23MB / 4.23MB            [A[A
+
+
+                              : 100%|██████████| 4.23MB / 4.23MB            [A[A
+Processing Files (1 / 1)      : 100%|██████████| 4.23MB / 4.23MB,  363kB/s  
+
+New Data Upload               : 100%|██████████| 4.23MB / 4.23MB,  363kB/s  [A
+
+
+
+Validating                    :           |   0%            [A[A[A
+
+
+
+Validating                    :           |   0%            [A[A[A
+
+
+                              : 100%|██████████| 4.23MB / 4.23MB            [A[A
+
+
+
+Validating                    :           |   0%            [A[A[A
+
+
+                              : 100%|██████████| 4.23MB / 4.23MB            [A[A
+
+
+
+Validating                    :           |   0%            [A[A[A
+
+
+                              : 100%|██████████| 4.23MB / 4.23MB            [A[A
+
+
+
+Validating                    : ██████████| 100%            [A[A[A
+Processing Files (1 / 1)      : 100%|██████████| 4.23MB / 4.23MB,  354kB/s  
+
+New Data Upload               : 100%|██████████| 4.23MB / 4.23MB,  354kB/s  
+
+Validating                    : ██████████| 100%            
+
+                              : 100%|██████████| 4.23MB / 4.23MB            
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=64,learning_rate=0.0003,seed=0/prefix.safetensors

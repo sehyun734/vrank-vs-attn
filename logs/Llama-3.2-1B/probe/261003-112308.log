@@ -1,0 +1,16 @@
+
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]
+Loading weights:   1%|          | 1/146 [00:00<00:19,  7.60it/s]
+Loading weights:  22%|██▏       | 32/146 [00:00<00:00, 163.28it/s]
+Loading weights:  45%|████▌     | 66/146 [00:00<00:00, 231.61it/s]
+Loading weights:  64%|██████▍   | 94/146 [00:00<00:00, 246.79it/s]
+Loading weights:  84%|████████▎ | 122/146 [00:00<00:00, 256.50it/s]
+Loading weights: 100%|██████████| 146/146 [00:00<00:00, 238.10it/s]
+
+Generating train split:   0%|          | 0/395000 [00:00<?, ? examples/s]
+Generating train split: 100%|██████████| 395000/395000 [00:06<00:00, 63548.62 examples/s]
+Generating train split: 100%|██████████| 395000/395000 [00:06<00:00, 63231.34 examples/s]
+pending=1
+  prefix/prefix_len=256,learning_rate=0.002,seed=0
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=256,learning_rate=0.002,seed=0/vrank.json
+save=sehyun734/Llama-3.2-1B-vrank-vs-attn/prefix/prefix_len=256,learning_rate=0.002,seed=0/attn.json
