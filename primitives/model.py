@@ -10,14 +10,15 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, DynamicCache, PreT
 
 
 def load_model(
+    organization: str,
     model_name: str,
-    attn_impl: str = "sdpa",
+    attn_implementation: str = "sdpa",
 ) -> tuple[PreTrainedModel, PreTrainedTokenizerBase]:
     # llama tokenizer는 pad 토큰이 없어 generate의 pad_token_id에서 오류.
     # 따라서 없으면 eos를 pad로 씀.
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    tokenizer = AutoTokenizer.from_pretrained(f"{organization}/{model_name}")
     tokenizer.pad_token = tokenizer.pad_token or tokenizer.eos_token
-    model = AutoModelForCausalLM.from_pretrained(model_name, attn_implementation=attn_impl, dtype=torch.bfloat16, device_map="auto")
+    model = AutoModelForCausalLM.from_pretrained(f"{organization}/{model_name}", attn_implementation=attn_implementation, dtype=torch.bfloat16, device_map="auto")
     model.requires_grad_(False)
     return model, tokenizer
 
@@ -35,23 +36,23 @@ def make_prefix_cache(
 def generate(
     model: PreTrainedModel,
     tokenizer: PreTrainedTokenizerBase,
-    questions: list[Tensor],
-    max_gen_len: int,
+    question_ids: list[Tensor],
+    max_generation_len: int,
     sink: Tensor | None = None,
     prefix: Tensor | None = None,
 ) -> Tensor:
-    cache = make_prefix_cache(sink, prefix, len(questions)) if prefix is not None else None
+    cache = make_prefix_cache(sink, prefix, len(question_ids)) if prefix is not None else None
     cache_len = cache.get_seq_length() if cache is not None else 0
-    input_ids = pad_sequence(questions, batch_first=True, padding_value=tokenizer.pad_token_id, padding_side="left")
-    attn_mask = pad_sequence([torch.ones_like(question) for question in questions], batch_first=True, padding_side="left")
+    input_ids = pad_sequence(question_ids, batch_first=True, padding_value=tokenizer.pad_token_id, padding_side="left")
+    attention_mask = pad_sequence([torch.ones_like(sample_question_ids) for sample_question_ids in question_ids], batch_first=True, padding_side="left")
     input_ids = pad(input_ids, (cache_len, 0), value=tokenizer.pad_token_id)
-    attn_mask = pad(attn_mask, (cache_len, 0), value=1)
+    attention_mask = pad(attention_mask, (cache_len, 0), value=1)
 
     output_ids = model.generate(
         input_ids=input_ids.to(model.device),
-        attention_mask=attn_mask.to(model.device),
+        attention_mask=attention_mask.to(model.device),
         past_key_values=cache,
-        max_new_tokens=max_gen_len,
+        max_new_tokens=max_generation_len,
         do_sample=False,
         pad_token_id=tokenizer.pad_token_id,
         stop_strings=["\nQuestion:"],

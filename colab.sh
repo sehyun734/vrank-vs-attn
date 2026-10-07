@@ -13,7 +13,7 @@ if [[ " $* " =~ $model_name_pattern ]]; then
 else
   model_name="$(sed -nE 's/^ *model_name: str = "([^"]+)".*/\1/p' "$1")"
 fi
-log_path="logs/${model_name##*/}/$entry_name/$(date +%y%m%d-%H%M%S).log"
+log_path="logs/$entry_name/${model_name##*/}/$(date +%y%m%d-%H%M%S).log"
 mkdir -p "$(dirname "$log_path")"
 
 trap 'rm -f "$tar_path"; colab stop -s "$session" || true' EXIT

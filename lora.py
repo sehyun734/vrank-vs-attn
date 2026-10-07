@@ -6,23 +6,24 @@ import torch
 from torch.nn import Parameter
 from transformers import PreTrainedModel, set_seed
 
-from primitives.data import load_metamathqa
-from primitives.hub import get_repo_name, save_lora
+from primitives.dataset import load_metamathqa
+from primitives.hub import save_lora
 from primitives.model import hook_lora, load_model
 from primitives.train import TrainConfig, train
 
 
 @dataclass
 class Config(TrainConfig):
-    model_name: str = "meta-llama/Llama-3.2-3B"
+    organization: str = "meta-llama"
+    model_name: str = "Llama-3.2-3B"
     rank: int = 4
     scale: float = 2.0
     num_samples: int = 32768
-    max_seq_len: int = 2048
+    max_sequence_len: int = 2048
     seed: int = 0
 
 
-def init_lora(
+def initialize_lora(
     model: PreTrainedModel,
     rank: int,
 ) -> dict[str, Parameter]:
@@ -42,16 +43,16 @@ def init_lora(
 def main() -> None:
     config = parse(Config)
     set_seed(config.seed)
-    model, tokenizer = load_model(config.model_name)
-    samples = load_metamathqa(tokenizer, config.num_samples, config.max_seq_len)
+    model, tokenizer = load_model(config.organization, config.model_name)
+    samples = load_metamathqa(tokenizer, config.num_samples, config.max_sequence_len)
 
-    lora = init_lora(model, config.rank)
-    hook_lora(model, lora, config.scale)
+    lora = initialize_lora(model, config.rank)
+    hook_lora(model, lora, scale=config.scale)
     train(model, samples, list(lora.values()), config)
 
     lora = {name: tensor * config.scale if name.endswith(".b") else tensor for name, tensor in lora.items()}
-    path = f"lora/rank={config.rank},learning_rate={config.learning_rate:g},seed={config.seed}"
-    save_lora(get_repo_name(config.model_name), path, lora)
+    path = f"lora/{config.model_name}/rank={config.rank},learning_rate={config.learning_rate:g},seed={config.seed}"
+    save_lora(path, lora)
 
 
 if __name__ == "__main__":

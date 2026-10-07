@@ -6,19 +6,20 @@ from torch import Tensor
 from torch.nn import Linear, Module, Parameter, Sequential, Tanh
 from transformers import DynamicCache, PreTrainedModel, set_seed
 
-from primitives.data import load_metamathqa
-from primitives.hub import get_repo_name, save_prefix
+from primitives.dataset import load_metamathqa
+from primitives.hub import save_prefix
 from primitives.model import load_model
 from primitives.train import TrainConfig, train
 
 
 @dataclass
 class Config(TrainConfig):
-    model_name: str = "meta-llama/Llama-3.2-3B"
+    organization: str = "meta-llama"
+    model_name: str = "Llama-3.2-3B"
     prefix_len: int = 16
     mlp_dim: int = 512
     num_samples: int = 32768
-    max_seq_len: int = 2048
+    max_sequence_len: int = 2048
     seed: int = 0
 
 
@@ -52,12 +53,12 @@ class PrefixMLP(Module):
 
 
 @torch.no_grad()
-def init_prefix(
+def initialize_prefix(
     model: PreTrainedModel,
-    input_ids: Tensor,
+    prefix_ids: Tensor,
 ) -> tuple[Tensor, Tensor]:
     cache = DynamicCache()
-    model(input_ids=input_ids.unsqueeze(0).to(model.device), past_key_values=cache)
+    model(input_ids=prefix_ids.unsqueeze(0).to(model.device), past_key_values=cache)
     key_value = torch.stack([torch.stack([layer.keys, layer.values]) for layer in cache.layers])
     sink = key_value[..., :1, :].clone()
     prefix = key_value[..., 1:, :].float()
@@ -67,21 +68,21 @@ def init_prefix(
 def main() -> None:
     config = parse(Config)
     set_seed(config.seed)
-    model, tokenizer = load_model(config.model_name)
+    model, tokenizer = load_model(config.organization, config.model_name)
 
     # prefix 초기화에 쓸 prefix_len개를 여유분으로 추가 로드.
     # 질문들을 이을 때 첫 질문의 bos만 남김.
-    samples = load_metamathqa(tokenizer, config.prefix_len + config.num_samples, config.max_seq_len)
-    questions = [question if i == 0 else question[1:] for i, (question, _) in enumerate(samples[: config.prefix_len])]
-    init_input_ids = torch.cat(questions)[: config.prefix_len + 1]
+    samples = load_metamathqa(tokenizer, config.prefix_len + config.num_samples, config.max_sequence_len)
+    question_ids = [sample_question_ids if i == 0 else sample_question_ids[1:] for i, (sample_question_ids, _) in enumerate(samples[: config.prefix_len])]
+    prefix_ids = torch.cat(question_ids)[: config.prefix_len + 1]
     samples = samples[config.prefix_len :]
 
-    sink, prefix = init_prefix(model, init_input_ids)
+    sink, prefix = initialize_prefix(model, prefix_ids)
     prefix_mlp = PrefixMLP(prefix, config.mlp_dim).to(model.device)
-    train(model, samples, list(prefix_mlp.parameters()), config, sink, prefix_mlp)
+    train(model, samples, list(prefix_mlp.parameters()), config, sink=sink, prefix_mlp=prefix_mlp)
 
-    path = f"prefix/prefix_len={config.prefix_len},learning_rate={config.learning_rate:g},seed={config.seed}"
-    save_prefix(get_repo_name(config.model_name), path, sink, prefix_mlp())
+    path = f"prefix/{config.model_name}/prefix_len={config.prefix_len},learning_rate={config.learning_rate:g},seed={config.seed}"
+    save_prefix(path, sink, prefix_mlp())
 
 
 if __name__ == "__main__":

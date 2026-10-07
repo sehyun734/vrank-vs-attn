@@ -4,11 +4,13 @@ from datasets import load_dataset
 from torch import Tensor
 from transformers import PreTrainedTokenizerBase
 
+from primitives.prompts import QUESTION
+
 
 def load_metamathqa(
     tokenizer: PreTrainedTokenizerBase,
     num_samples: int,
-    max_seq_len: int,
+    max_sequence_len: int,
     held_out: bool = False,
 ) -> list[tuple[Tensor, Tensor]]:
     dataset = load_dataset("meta-math/MetaMathQA", split="train").shuffle(seed=0)
@@ -22,21 +24,21 @@ def load_metamathqa(
 
         # metamathqa는 한 질문(original_question)을 여러 스타일로 변형해 담음.
         # 같은 질문이 학습과 probe 양쪽에 들어가지 않도록, 원본 질문을 crc32로 분리.
-        orig_question = row["original_question"]
-        if (crc32(orig_question.encode()) % 10 == 0) != held_out:
+        original_question = row["original_question"]
+        if (crc32(original_question.encode()) % 10 == 0) != held_out:
             continue
-        if held_out and orig_question in seen_questions:
+        if held_out and original_question in seen_questions:
             continue
 
         # llama tokenizer는 앞에 bos를 자동으로 붙임.
         # answer는 question 뒤에 바로 이어지므로 bos 없이 토큰화.
-        question = tokenizer(f"Question: {row['query']}\nAnswer:", return_tensors="pt")["input_ids"][0]
-        answer = tokenizer(f" {row['response']}{tokenizer.eos_token}", add_special_tokens=False, return_tensors="pt")["input_ids"][0]
-        if len(question) + len(answer) > max_seq_len:
+        question_ids = tokenizer(QUESTION.format(question=row["query"]), return_tensors="pt")["input_ids"][0]
+        answer_ids = tokenizer(f" {row['response']}{tokenizer.eos_token}", add_special_tokens=False, return_tensors="pt")["input_ids"][0]
+        if len(question_ids) + len(answer_ids) > max_sequence_len:
             continue
 
-        seen_questions.add(orig_question)
-        samples.append((question, answer))
+        seen_questions.add(original_question)
+        samples.append((question_ids, answer_ids))
         if len(samples) == num_samples:
             break
 
@@ -50,7 +52,7 @@ def load_gsm8k(
     dataset = load_dataset("openai/gsm8k", "main", split="test").select(range(num_samples))
     samples = []
     for row in dataset:
-        question = tokenizer(f"Question: {row['question']}\nAnswer:", return_tensors="pt")["input_ids"][0]
+        question_ids = tokenizer(QUESTION.format(question=row["question"]), return_tensors="pt")["input_ids"][0]
         answer = float(row["answer"].split("####")[-1].replace(",", ""))
-        samples.append((question, answer))
+        samples.append((question_ids, answer))
     return samples

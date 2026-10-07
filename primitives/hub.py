@@ -7,83 +7,74 @@ import torch
 from torch import Tensor
 
 
-def get_repo_name(
-    model_name: str,
-) -> str:
-    return f"{HfApi().whoami()['name']}/{model_name.split('/')[-1]}-vrank-vs-attn"
-
-
-def get_unprobed_paths(
-    repo_name: str,
-) -> list[str]:
-    files = set(HfApi().list_repo_files(repo_name))
-    paths = {"base"} | {str(Path(file).parent) for file in files if file.endswith(".safetensors")}
-    paths = sorted(path for path in paths if f"{path}/vrank.json" not in files or f"{path}/attn.json" not in files)
-    print(f"pending={len(paths)}", *paths, sep="\n  ", flush=True)
-    return paths
-
-
-def get_unbenched_paths(
-    repo_name: str,
-) -> list[str]:
-    files = set(HfApi().list_repo_files(repo_name))
-    paths = {"base"} | {str(Path(file).parent) for file in files if file.endswith(".safetensors")}
-    paths = sorted(path for path in paths if f"{path}/gsm8k.json" not in files)
-    print(f"pending={len(paths)}", *paths, sep="\n  ", flush=True)
-    return paths
+def get_repo_name() -> str:
+    return f"{HfApi().whoami()['name']}/vrank-vs-attn"
 
 
 def save_prefix(
-    repo_name: str,
     path: str,
     sink: Tensor,
     prefix: Tensor,
 ) -> None:
     data = save({"sink": sink.detach().cpu().contiguous(), "prefix": prefix.detach().cpu().contiguous()})
     api = HfApi()
+    repo_name = get_repo_name()
     api.create_repo(repo_name, exist_ok=True)
     api.upload_file(path_or_fileobj=data, path_in_repo=f"{path}/prefix.safetensors", repo_id=repo_name)
-    print(f"save={repo_name}/{path}/prefix.safetensors", flush=True)
+    print(f"saved {path}/prefix.safetensors", flush=True)
 
 
 def load_prefix(
-    repo_name: str,
     path: str,
     device: torch.device,
 ) -> tuple[Tensor, Tensor]:
-    file = hf_hub_download(repo_name, f"{path}/prefix.safetensors")
-    tensors = load_file(file, device=str(device))
+    tensors = load_file(hf_hub_download(get_repo_name(), f"{path}/prefix.safetensors"), device=str(device))
     return tensors["sink"], tensors["prefix"]
 
 
 def save_lora(
-    repo_name: str,
     path: str,
     lora: dict[str, Tensor],
 ) -> None:
     data = save({name: tensor.detach().cpu().contiguous() for name, tensor in lora.items()})
     api = HfApi()
+    repo_name = get_repo_name()
     api.create_repo(repo_name, exist_ok=True)
     api.upload_file(path_or_fileobj=data, path_in_repo=f"{path}/lora.safetensors", repo_id=repo_name)
-    print(f"save={repo_name}/{path}/lora.safetensors", flush=True)
+    print(f"saved {path}/lora.safetensors", flush=True)
 
 
 def load_lora(
-    repo_name: str,
     path: str,
     device: torch.device,
 ) -> dict[str, Tensor]:
-    file = hf_hub_download(repo_name, f"{path}/lora.safetensors")
-    return load_file(file, device=str(device))
+    return load_file(hf_hub_download(get_repo_name(), f"{path}/lora.safetensors"), device=str(device))
 
 
-def save_json(
-    repo_name: str,
-    path: str,
+def get_pending_targets(
+    model_name: str,
+    result_name: str,
     file_name: str,
-    data: dict,
+) -> list[str]:
+    files = set(HfApi().list_repo_files(get_repo_name()))
+    targets = [f"base/{model_name}"]
+    for file in sorted(files):
+        if file.startswith((f"lora/{model_name}/", f"prefix/{model_name}/")) and file.endswith(".safetensors"):
+            targets.append(str(Path(file).parent))
+    targets = [target for target in targets if f"{result_name}/{target}/{file_name}.json" not in files]
+    print(f"{result_name} pending {len(targets)}", *targets, sep="\n  ", flush=True)
+    return targets
+
+
+def save_result(
+    result_name: str,
+    target: str,
+    file_name: str,
+    result: dict,
 ) -> None:
+    path = f"{result_name}/{target}/{file_name}.json"
     api = HfApi()
+    repo_name = get_repo_name()
     api.create_repo(repo_name, exist_ok=True)
-    api.upload_file(path_or_fileobj=json.dumps(data, indent=2).encode(), path_in_repo=f"{path}/{file_name}.json", repo_id=repo_name)
-    print(f"save={repo_name}/{path}/{file_name}.json", flush=True)
+    api.upload_file(path_or_fileobj=json.dumps(result, indent=2).encode(), path_in_repo=path, repo_id=repo_name)
+    print(f"saved {path}", flush=True)

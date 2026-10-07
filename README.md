@@ -20,7 +20,9 @@ value 공간은 vrank, new_ratio, prefix_vrank, prefix_new_ratio, hidden_rank로
 
 llama-3.2-1b 기준. base 정확도 3.5%. 발산해 base 이하로 떨어진 lora rank 64 lr 3e-3과 prefix tuning prefix_len 16 lr 3e-3 run은 제외.
 
-![](./figures/Llama-3.2-1B-corr.png)
+![](./figures/Llama-3.2-1B/vrank.png)
+
+![](./figures/Llama-3.2-1B/attn.png)
 
 성능은 lora가 최대 40.6%, prefix tuning이 최대 27.4%로 lora가 확연히 높아, 논문의 결과는 재현되지 않음.
 

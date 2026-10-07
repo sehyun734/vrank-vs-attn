@@ -30,22 +30,22 @@ def backward(
     sink: Tensor | None = None,
     prefix_mlp: Module | None = None,
 ) -> float:
-    num_answer_tokens = sum(len(answer) for _, answer in batch)
-    total_loss = 0.0
+    num_answer_tokens = sum(len(answer_ids) for _, answer_ids in batch)
+    batch_loss = 0.0
 
     for offset in range(0, len(batch), micro_size):
         micro_batch = batch[offset : offset + micro_size]
-        input_ids = [torch.cat([question, answer]) for question, answer in micro_batch]
-        labels = [torch.cat([torch.full_like(question, -100), answer]) for question, answer in micro_batch]
+        input_ids = [torch.cat([question_ids, answer_ids]) for question_ids, answer_ids in micro_batch]
+        labels = [torch.cat([torch.full_like(question_ids, -100), answer_ids]) for question_ids, answer_ids in micro_batch]
         input_ids = pad_sequence(input_ids, batch_first=True).to(model.device)
         labels = pad_sequence(labels, batch_first=True, padding_value=-100).to(model.device)
 
         cache = make_prefix_cache(sink, prefix_mlp(), len(micro_batch)) if prefix_mlp is not None else None
         loss = model(input_ids=input_ids, labels=labels, past_key_values=cache, num_items_in_batch=num_answer_tokens).loss
         loss.backward()
-        total_loss += loss.item()
+        batch_loss += loss.item()
 
-    return total_loss
+    return batch_loss
 
 
 def train(
@@ -63,26 +63,21 @@ def train(
     optimizer = AdamW(params, lr=config.learning_rate, weight_decay=0)
     scheduler = get_cosine_schedule_with_warmup(optimizer, round(num_steps * config.warmup_ratio), num_steps)
 
+    losses = []
     log_time = time.perf_counter()
     torch.cuda.reset_peak_memory_stats()
     for epoch in range(config.num_epochs):
         random.shuffle(samples)
         for step, offset in enumerate(range(0, len(samples), config.batch_size)):
             batch = samples[offset : offset + config.batch_size]
-            loss = backward(model, batch, config.micro_size, sink, prefix_mlp)
+            batch_loss = backward(model, batch, config.micro_size, sink=sink, prefix_mlp=prefix_mlp)
             optimizer.step()
             scheduler.step()
             optimizer.zero_grad()
 
+            losses.append(batch_loss)
             if (step + 1) % 16 == 0:
-                print(
-                    f"epoch={epoch + 1}/{config.num_epochs} "
-                    f"step={step + 1}/{num_batches} "
-                    f"loss={loss:.4f} "
-                    f"lr={scheduler.get_last_lr()[0]:.2e} "
-                    f"dt={format_duration(time.perf_counter() - log_time)} "
-                    f"mem={format_memory(torch.cuda.max_memory_allocated())}",
-                    flush=True,
-                )
+                print(f"epoch {epoch + 1}/{config.num_epochs} batch {step + 1}/{num_batches} loss {sum(losses) / len(losses):.4f} learning_rate {scheduler.get_last_lr()[0]:.2e} time {format_duration(time.perf_counter() - log_time)} memory {format_memory(torch.cuda.max_memory_allocated())}", flush=True)
+                losses = []
                 log_time = time.perf_counter()
                 torch.cuda.reset_peak_memory_stats()
